@@ -23,11 +23,12 @@ val compilerPlugins = List(
 )
 
 val commonSettings = Seq(
-  scalaVersion := "2.13.4",
+  scalaVersion := "2.12.13",
   scalacOptions --= Seq("-Xfatal-warnings"),
   name := "zio-playground",
   libraryDependencies ++= compilerPlugins,
   libraryDependencies ++= Seq(
+    "org.scalameta" %% "semanticdb" % "4.0.0",
     "dev.zio" %% "zio" % "1.0.4-2"
   )
 )
